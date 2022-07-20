@@ -28,6 +28,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
     {
         return false; // SDL 초기화 실패
     }
+    m_bRunning = true;
 
     SDL_Surface* pTempSurface = SDL_LoadBMP("Assets/rider.bmp");
 
@@ -42,7 +43,6 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
     m_destinationRectangle.x = m_sourceRectangle.x = 0;
     m_destinationRectangle.y = m_sourceRectangle.y = 0;
 
-    m_bRunning = true;
     return true;
 }
 
