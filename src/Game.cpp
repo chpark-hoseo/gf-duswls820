@@ -42,14 +42,27 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
     m_destinationRectangle.w = m_sourceRectangle.w;
     m_destinationRectangle.h = m_sourceRectangle.h;
 
-    m_destinationRectangle.x = m_sourceRectangle.x = 100;
-    m_destinationRectangle.y = m_sourceRectangle.y = 100;
+    m_destinationRectangle.x = m_sourceRectangle.x = 0;
+    m_destinationRectangle.y = m_sourceRectangle.y = 0;
 
     return true;
 }
 
 void Game::update()
 {
+
+    int vel = 1;
+    if (m_destinationRectangle.x >= 1000)
+    {
+        vel *= -1;
+    }
+    else if (m_destinationRectangle.x <= 0)
+    {
+        vel *= -1;
+    }
+
+    m_destinationRectangle.x += vel;
+    
 }
 
 void Game::render()
