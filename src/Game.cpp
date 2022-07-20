@@ -1,3 +1,4 @@
+
 #include "Game.h"
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, int flags)
@@ -24,4 +25,26 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, in
 
     m_bRunning = true;
     return true;
+}
+
+void Game::render()
+{
+
+}
+
+void Game::update()
+{
+}
+
+bool Game::running()
+{
+    return false;
+}
+
+void Game::handleEvents()
+{
+}
+
+void Game::clean()
+{
 }
