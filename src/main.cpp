@@ -2,6 +2,7 @@
 
 SDL_Window* g_pWindow = 0;
 SDL_Renderer* g_pRenderer = 0;
+bool g_bRunning = false;
 
 int main(int argc, char* args[])
 {
@@ -22,11 +23,11 @@ int main(int argc, char* args[])
         return 1;
     }
 
-    SDL_SetRenderDrawColor(g_pRenderer, 255, 255, 255, 255);
+    SDL_SetRenderDrawColor(g_pRenderer, 0, 0, 0, 255);
     SDL_RenderClear(g_pRenderer);
     SDL_RenderPresent(g_pRenderer);
 
-    SDL_Delay(10000);
+    SDL_Delay(5000);
     SDL_Quit();
 
     return 0;

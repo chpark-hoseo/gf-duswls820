@@ -2,7 +2,8 @@
 
 #include <SDL2/SDL.h>
 
-class Game {
+class Game
+{
 public:
     Game() {}
     ~Game() {}
@@ -18,4 +19,12 @@ private:
     SDL_Window* m_pWindow;
     SDL_Renderer* m_pRenderer;
     bool m_bRunning;
+
+    SDL_Texture* m_pTexture;
+
+    // 원본 사각형
+    SDL_Rect m_sourceRectangle;
+
+    // 대상 사각형
+    SDL_Rect m_destinationRectangle;
 };
